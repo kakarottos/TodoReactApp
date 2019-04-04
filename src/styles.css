@@ -1,4 +1,39 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: lightblue;
+  border-radius: 20px;
+  width: 50%;
+  margin: 0 auto;
+  word-wrap: break-word;
+  box-shadow: 10px 10px 5px -5px gray;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid gray;
+  margin-right: 10px;
+  background-color: lightblue;
+}
+input:focus {
+  background-color: rgba(100, 100, 100, 0.2);
+  box-shadow: 0 10px 5px -5px gray;
+}
+button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+button:hover {
+  background-color: lightgreen;
+}
+
+ul {
+  counter-reset: my-list-counter;
+  list-style-type: none;
+  padding-right: 40px;
+}
+p::before {
+  content: counter(my-list-counter, decimal) ". ";
+  counter-increment: my-list-counter;
 }
